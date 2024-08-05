@@ -1,0 +1,22 @@
+.about {
+  padding: 8rem 0;
+}
+
+.about h1 {
+  font-size: 3rem;
+  color: rgba(44, 42, 42, 0.933);
+  line-height: 1.8em;
+}
+
+.box {
+  background-color: #fff;
+  padding: 6rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.6em;
+  letter-spacing: 0.04em;
+  padding: 0.5em 0;
+}

@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,400&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+:root {
+  --max-width: 1440px;
+  --cl-primary: hsl(224, 50%, 31%);
+  --cl-secondary: hsl(198, 74%, 54%);
+  --navbar-height: 70px;
+  --gray: hsla(34, 0%, 50%, 1);
+
+  --font--2: clamp(0.84rem, calc(0.93rem + -0.1vw), 0.91rem);
+  --font--1: clamp(1.09rem, calc(1.08rem + 0.04vw), 1.13rem);
+  --font-0: clamp(1.31rem, calc(1.26rem + 0.27vw), 1.5rem);
+  --font-1: clamp(1.58rem, calc(1.45rem + 0.61vw), 2rem);
+  --font-2: clamp(1.89rem, calc(1.67rem + 1.11vw), 2.67rem);
+  --font-3: clamp(2.27rem, calc(1.9rem + 1.84vw), 3.55rem);
+  --font-4: clamp(2.72rem, calc(2.15rem + 2.88vw), 4.74rem);
+  --font-5: clamp(3.27rem, calc(2.39rem + 4.35vw), 6.31rem);
+}
+html,
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #edf3f7;
+  font-size: 62.5%;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+section {
+  display: block;
+}
+
+a:link,
+a:visited {
+  color: #fff;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.container {
+  height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  padding: 0 2rem;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 4rem;
+  }
+}
+
+.row {
+  max-width: var(--max-width);
+  display: block;
+}
+
+.brand-name,
+.brand-name:visited,
+.brand-name:link {
+  font-size: 3rem;
+  text-decoration: none;
+  color: #fff;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .row {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .col-1-2 {
+    flex: 1;
+  }
+  .col-1-2.col-lg {
+    flex: 2;
+  }
+  .col-1-2.col-xlg {
+    flex: 3;
+  }
+}
+
+.heading-text {
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+.heading-text.heading-text--big {
+  font-size: 3rem;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.slide::-webkit-scrollbar {
+  height: 6px; /* height of horizontal scrollbar ← You're missing this */
+  width: 6px; /* width of vertical scrollbar */
+  border: 2px solid transparent;
+  /* background-color: red; */
+}
+.slide::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+}
+
+.slide::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 83%);
+  outline: 1px solid hsl(0, 0%, 76%);
+  border-radius: 10px;
+}
+
+.rating-skeleton {
+  height: 50px;
+  width: 50px;
+  background-image: linear-gradient(
+    100deg,
+    hsl(200, 3%, 85%) 40%,
+    hsl(200, 3%, 86%) 50%,
+    hsl(200, 3%, 85%) 60%
+  );
+  border-radius: 100%;
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: skeleton 1s linear infinite;
+}
+
+/* animation global */
+@keyframes skeleton {
+  to {
+    background-position-x: -20%;
+  }
+}

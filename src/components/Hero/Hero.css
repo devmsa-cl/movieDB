@@ -1,0 +1,47 @@
+.hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      hsl(224, 50%, 31%),
+      hsl(224, 50%, 31%, 0.35%)
+    ),
+    url(../../../public/mv.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero__text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.hero__text h1 {
+  font-size: 6rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  color: #fff;
+}
+.hero__text p {
+  font-size: 1.8rem;
+  letter-spacing: 0.025em;
+  color: #fff;
+}
+
+.hero__search {
+  padding: 0 4em;
+  width: 100%;
+  max-width: 700px;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+  .hero__search {
+    width: 70%;
+  }
+}

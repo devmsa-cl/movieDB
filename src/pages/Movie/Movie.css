@@ -1,0 +1,205 @@
+.movie-header {
+  padding-top: 10rem;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(224, 50%, 31%),
+    hsl(224, 50%, 31%, 70%)
+  );
+  height: calc(100vh - var(--navbar-height));
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.movie__poster {
+  width: 50%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.movie__detail {
+  color: #fff;
+  width: 100%;
+  margin-top: 2rem;
+}
+.movie__poster img {
+  height: 100%;
+  width: 100%;
+}
+
+.movie-header .col-1-2 {
+  display: block;
+  height: 30%;
+}
+.movie-header .col-1-2:last-child {
+  display: block;
+  height: 70%;
+}
+.movie__title {
+  font-size: 4rem;
+  fill: #fff;
+}
+.movie__title svg {
+  cursor: pointer;
+  margin-left: 2rem;
+  font-size: 3rem;
+}
+.movie__year {
+  font-weight: 300;
+}
+
+.movie__info {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.movie__info > p {
+  padding: 0 1rem;
+  font-size: 1.4rem;
+}
+
+.movie__info ul {
+  display: flex;
+  list-style: none;
+  margin-left: 1.2rem;
+}
+.movie__info ul li:first-child {
+  list-style: square;
+}
+.movie__info li {
+  padding: 0 0.5em;
+  font-size: var(--font-0);
+}
+
+.movie__overview {
+  font-size: var(--font-0);
+  line-height: 26px;
+}
+
+.movie__overview h4 {
+  font-size: var(--font-1);
+  line-height: 3rem;
+}
+
+.movie__poster.skeleton {
+  position: relative;
+}
+.movie__poster.skeleton .skeleton-image {
+  animation: skeleton 1s linear infinite;
+}
+
+.movie__title.skeleton {
+  --size: 25px;
+  animation: skeleton 1s linear infinite;
+  border-radius: var(--size);
+  background-image: linear-gradient(
+    100deg,
+    hsl(200, 3%, 85%) 40%,
+    hsl(200, 3%, 86%) 50%,
+    hsl(200, 3%, 85%) 60%
+  );
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  height: var(--size);
+  width: 70%;
+}
+
+.movie__info.skeleton > p {
+  --size: 15px;
+  animation: skeleton 1s linear infinite;
+  border-radius: var(--size);
+  background-image: linear-gradient(
+    100deg,
+    hsl(200, 3%, 85%) 40%,
+    hsl(200, 3%, 86%) 50%,
+    hsl(200, 3%, 85%) 60%
+  );
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  height: var(--size);
+  width: 70%;
+  margin: 0.7rem 0;
+  width: 40%;
+}
+
+.movie__info.skeleton div {
+  margin-right: 0.5rem;
+}
+.movie__overview.skeleton h4 {
+  --size: 20px;
+  animation: skeleton 1s linear infinite;
+  border-radius: var(--size);
+  background-image: linear-gradient(
+    100deg,
+    hsl(200, 3%, 85%) 40%,
+    hsl(200, 3%, 86%) 50%,
+    hsl(200, 3%, 85%) 60%
+  );
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  height: var(--size);
+  width: 70%;
+  width: 45%;
+}
+.movie__overview.skeleton p {
+  --size: 15px;
+  animation: skeleton 1s linear infinite;
+  border-radius: var(--size);
+  background-image: linear-gradient(
+    100deg,
+    hsl(200, 3%, 85%) 40%,
+    hsl(200, 3%, 86%) 50%,
+    hsl(200, 3%, 85%) 60%
+  );
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  height: var(--size);
+  width: 70%;
+  margin: 0.7rem 0;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .movie__detail {
+    width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .movie-header {
+    height: 800px;
+  }
+  .movie__poster {
+    height: 400px;
+    width: 270px;
+  }
+  .movie-header .col-1-2 {
+    flex: 0;
+  }
+
+  .movie-header .col-1-2:last-child {
+    margin-right: auto;
+    margin-left: 4rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .movie__poster.skeleton .skeleton-image {
+    --size: 25px;
+    animation: skeleton 1s linear infinite;
+    border-radius: var(--size);
+    background-image: linear-gradient(
+      100deg,
+      hsl(200, 3%, 85%) 40%,
+      hsl(200, 3%, 86%) 50%,
+      hsl(200, 3%, 85%) 60%
+    );
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    height: var(--size);
+    width: 100%;
+    height: 100%;
+  }
+}

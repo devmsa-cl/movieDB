@@ -1,0 +1,86 @@
+.movies-slide:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.slide {
+  height: 340px;
+  display: flex;
+  gap: 2rem;
+  overflow-y: hidden;
+}
+.slide__score {
+  position: absolute;
+  top: 88%;
+  right: 1%;
+}
+
+.slide__item {
+  margin-top: 2rem;
+  height: 240px;
+  width: 160px;
+  position: relative;
+}
+.slide__item.skeleton {
+  min-height: 240px;
+  min-width: 160px;
+  background-image: linear-gradient(
+    100deg,
+    hsl(200, 3%, 85%) 40%,
+    hsl(200, 3%, 86%) 50%,
+    hsl(200, 3%, 85%) 60%
+  );
+  border-radius: 10px;
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: skeleton 1s linear infinite;
+}
+.slide__item.skeleton h3 {
+  margin-top: 2rem;
+  width: 100%;
+  height: 12px;
+  background-image: linear-gradient(
+    100deg,
+    hsl(200, 3%, 85%) 40%,
+    hsl(200, 3%, 86%) 50%,
+    hsl(200, 3%, 85%) 60%
+  );
+  border-radius: 10px;
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: skeleton 1s linear infinite;
+}
+.slide__item h3 {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  padding-top: 1.5rem;
+}
+.slide__item.skeleton > p {
+  margin-top: 0.6rem;
+  width: 60%;
+  height: 8px;
+  background-image: linear-gradient(
+    100deg,
+    hsl(200, 3%, 85%) 40%,
+    hsl(200, 3%, 86%) 50%,
+    hsl(200, 3%, 85%) 60%
+  );
+  border-radius: 10px;
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: skeleton 1s linear infinite;
+}
+.slide__item > p {
+  color: rgb(94, 94, 94);
+  font-size: 1rem;
+}
+
+.slide__movie-cover {
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.slide__movie-cover.skeleton {
+  min-height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0;
+}
